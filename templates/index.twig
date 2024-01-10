@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>Welcome to Craft CMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    {{ craft.vite.script("/src/js/app.js",false) }}
+    {# <link rel="stylesheet" href="../../src/scss/styles.scss"> #}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+    {# <style>
+        html,
+        body {
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+            height: 100%;
+            font-family: system-ui, BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: hsl(212, 60%, 97%);
+            color: hsl(209, 18%, 30%);
+            display: flex;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        h2 {
+            margin-top: 24px;
+            font-size: 1em;
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        p {
+            line-height: 1.4em;
+            margin-bottom: 1.4em;
+        }
+
+        ul {
+            line-height: 1.3em;
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        ul li {
+            margin-bottom: 0.35em;
+        }
+
+        a {
+            color: #0B69A3;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .go {
+            color: #0B69A3;
+        }
+
+        .go:after {
+            padding-left: 4px;
+            content: '→';
+            text-decoration: none !important;
+        }
+
+        small {
+            color: hsl(211, 11%, 59%);
+        }
+
+        code {
+            display: inline-block;
+            color: #EF4E4E;
+            padding: 0 2px;
+            background: hsl(212, 60%, 97%);
+            border-radius: 3px;
+            line-height: 1.3;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+            font-size: 0.9em;
+        }
+
+        #container {
+            flex-grow: 1;
+        }
+
+        #modal {
+            background: #fff;
+        }
+
+        #aside {
+            background: hsl(212, 60%, 97%);
+        }
+
+        .content {
+            padding: 35px;
+            padding-left: calc(35px + env(safe-area-inset-left));
+            padding-right: calc(35px + env(safe-area-inset-right));
+        }
+
+        @media (min-width:768px) {
+            #modal {
+                display: flex;
+            }
+
+            #main {
+                width: 50%;
+                overflow: auto;
+            }
+
+            #aside {
+                width: 50%;
+                overflow: auto;
+            }
+        }
+
+        @media (min-width:768px) and (min-height: 376px) {
+            body {
+                background-color: hsl(212, 50%, 93%);
+                background-image: url("{{ view.getAssetManager().getPublishedUrl('@app/web/assets/installer/dist', true, 'images/installer-bg.png') }}");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+
+            #container {
+                display: flex;
+                padding: 24px;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #modal {
+                height: 100%;
+                max-width: 800px;
+                max-height: 525px;
+                border-radius: 4px;
+                overflow: auto;
+                box-shadow: 0 25px 100px rgba(0, 0, 0, 0.5);
+            }
+
+            #aside {
+                overflow: auto;
+            }
+        }
+
+    </style> #}
+</head>
+ {# <body class="ltr">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<div id="container">
+    <div id="modal">
+        <div id="main">
+            <div class="content">
+                <h1>Welcome !</h1>
+                <p>Thanks for installing Craft CMS!</p>
+                <p>You’re looking at the <code>index.twig</code> template file located in your
+                    <code>templates/</code> folder. Once you’re ready to start building out your site’s
+                    front end, you can replace this with something custom.</p>
+                <p>If you’re new to Craft CMS, take some time to check out the resources on the right
+                    when you get a chance&mdash;especially
+                    <a href="https://craftcms.com/discord" target="_blank">Discord</a>
+                    and <a href="http://craftcms.stackexchange.com/" target="_blank">Stack Exchange</a>.
+                    The Craft community is full of smart, friendly, and helpful people!</p>
+                <p><span class="go"><a href="{{ cpUrl('') }}">Go to your control panel</a></span></p>
+            </div>
+        </div>
+        <div id="aside">
+            <div class="content">
+                <h2>Popular Resources</h2>
+                <ul>
+                    <li><a href="https://craftcms.com/docs/getting-started-tutorial/" target="_blank">Tutorial</a><br><small>Learn the basics.</small></li>
+                    <li><a href="https://craftcms.com/docs/4.x/" target="_blank">Documentation</a><br><small>Read the official docs.</small></li>
+                    <li><a href="https://craftcms.com/guides" target="_blank">Knowledge Base</a><br><small>Find answers to common problems.</small></li>
+                    <li><a href="https://twitter.com/hashtag/craftcms" target="_blank">#craftcms</a><br><small>See the latest tweets about Craft.</small></li>
+                    <li><a href="https://craftcms.com/discord" target="_blank">Discord</a><br><small>Meet the community.</small></li>
+                    <li><a href="http://craftcms.stackexchange.com/" target="_blank">Stack Exchange</a><br><small>Get help and help others.</small></li>
+                    <li><a href="https://craftquest.io/" target="_blank">CraftQuest</a><br><small>Watch unlimited video lessons and courses.</small></li>
+                    <li><a href="http://craftlinklist.com/" target="_blank">Craft Link List</a><br><small>Stay in-the-know.</small></li>
+                    <li><a href="https://nystudio107.com/blog" target="_blank">nystudio107 Blog</a><br><small>Learn Craft and modern web development.</small></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div> #}
+<body>
+<div class="container py-4 px-3 mx-auto">
+
+      <header class="d-flex justify-content-between align-items-md-center pb-3 mb-5 border-bottom">
+        <h1 class="h4">
+          <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-bootstrap-fill d-inline-block me-2" viewBox="0 0 16 16">
+              <path d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375v2.725z"/>
+              <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4h-8zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396H5.062z"/>
+            </svg>
+            <span>Sass &amp; JS</span>
+          </a>
+        </h1>
+        <a href="https://github.com/twbs/examples/tree/main/sass-js/" target="_blank" rel="noopener">View on GitHub</a>
+      </header>
+
+      <h1>Get started with Bootstrap</h1>
+      <div class="col-lg-8 px-0">
+        <p class="fs-4">You've successfully loaded up a Bootstrap example! It's loaded up with <a href="https://getbootstrap.com/">Bootstrap 5</a> and tooling for compiling our Sass and JavaScript to your needs.</p>
+        <p>If this button appears blue and the link appears purple, you've done it!</p>
+      </div>
+
+      <button type="button" class="btn btn-primary me-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggle offcanvas</button>
+      <a id="popoverButton" class="text-success" href="#" role="button" data-bs-toggle="popover" title="Custom popover" data-bs-content="This is a Bootstrap popover.">Example popover</a>
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+          </div>
+          <div class="dropdown mt-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <hr class="col-1 my-5 mx-0">
+
+      <h2>Guides</h2>
+      <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>
+      <ul class="icon-list">
+        <li><a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">Bootstrap quick start guide</a></li>
+        <li><a href="https://getbootstrap.com/docs/5.3/getting-started/webpack/">Bootstrap Webpack guide</a></li>
+        <li><a href="https://getbootstrap.com/docs/5.3/getting-started/parcel/">Bootstrap Parcel guide</a></li>
+        <li><a href="https://getbootstrap.com/docs/5.3/getting-started/vite/">Bootstrap Vite guide</a></li>
+        <li><a href="https://getbootstrap.com/docs/5.3/getting-started/contribute/">Contributing to Bootstrap</a></li>
+      </ul>
+
+      <hr class="mt-5 mb-4">
+
+      <p class="text-muted">Created and open sourced by the Bootstrap team. Licensed MIT.</p>
+    </div>
+
+    {# <script type="module" src="../../src/js/app.js"></script> #}
+</body>
+</html>

@@ -1,0 +1,27 @@
+dateModified: 1704319961
+email:
+  fromEmail: manroopnanda999@gmail.com
+  fromName: 'Manroop Singh Nanda'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    4ff16fc5-60d6-4632-bed1-cdb34a671571: Common # Common
+    51e665be-1907-4cd4-8187-3adc0fc9ed84: 'Manroop Singh Nanda' # Manroop Singh Nanda
+    96e252b2-78ac-4a6e-b87d-e9b6e0cf4827: 'Manroop Singh Nanda' # Manroop Singh Nanda
+plugins:
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: 'Manroop Singh Nanda'
+  schemaVersion: 4.5.3.0
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
